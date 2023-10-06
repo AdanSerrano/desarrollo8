@@ -382,15 +382,28 @@
     End Sub
 
     Private Sub resetGame()
+        ' Elimina todos los elementos de la respuesta del usuario y la respuesta de la CPU
         deleteAll()
         answerOperands.Clear()
         answerOperators.Clear()
+
+        ' Habilita los botones nuevamente
+        For Each btn In operandBtns
+            btn.Enabled = True
+        Next
+
+        For Each btn In operatorBtns
+            btn.Enabled = True
+        Next
+
+        ' Limpia las listas y realiza otros reinicios necesarios
         checkControls()
         operands.Clear()
         operators.Clear()
         calculateUserInput()
         calculateCpuAnswer()
     End Sub
+
 
     'Calculates the user's current answer
     Private Sub calculateUserInput()
