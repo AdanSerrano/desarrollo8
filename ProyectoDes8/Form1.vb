@@ -62,7 +62,7 @@
 
     'Add time if the user answers correctly
     Private Sub addTime()
-        time += 15 ' +15 seconds by default
+        time += 40 ' +40 seconds by default
     End Sub
 
     'Change remaining time color depending on how much time is left
